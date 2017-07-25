@@ -178,5 +178,6 @@ loginer.forgot(process.env['COGNITO_USERNAME'], function(result) {
 loginer.login(process.env['COGNITO_USERNAME'], process.env['COGNITO_PASSWORD'], function(result) {
     //console.log('result:', result);
     var idToken = result.idToken.jwtToken;
+    console.log('token:', idToken);
     new NotesCaller().call(process.env['NOTES_HOST'], idToken, console.log);
 });
