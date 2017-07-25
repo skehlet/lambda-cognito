@@ -20,10 +20,8 @@ aws cognito-idp sign-up \
 --region us-east-1 \
 --user-attributes '[{"Name":"given_name","Value":"John"},{"Name":"family_name","Value":"Doe"},{"Name":"email","Value":"jdoe@myemail.com"},{"Name":"gender","Value":"Male"},{"Name":"phone_number","Value":"+61XXXXXXXXXX"}]'  
 
-aws cognito-idp sign-up \
---client-id xxxx \
---username jdoe \
---password P@ssw0rd \
---region us-east-1 \
---user-attributes '[{"Name":"given_name","Value":"John"},{"Name":"family_name","Value":"Doe"},{"Name":"email","Value":"jdoe@myemail.com"},{"Name":"gender","Value":"Male"},{"Name":"phone_number","Value":"+61XXXXXXXXXX"}]'  
+aws cognito-idp admin-update-user-attributes \
+--user-pool-id us-west-2_svyY78jO0 \
+--username skehlet \
+--userattributes '[{"Name":"name","Value":"Steve Kehlet"}]'
 ```
